@@ -1,0 +1,256 @@
+@charset 'utf-8';
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #222328;
+    font-size: 15px;
+}
+a {
+    color: #222328;
+    text-decoration: none;
+}
+
+.container {
+    width: 1000px;
+}
+.container > div {
+    float: left;
+    box-sizing: border-box;
+}
+.left {
+    width: 200px;
+}
+.right {
+    width: 800px;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+}
+header > div {}
+.header-logo {
+    height: 100px;
+    line-height: 130px;
+}
+/* Navigation */
+.left article {}
+.header-logo,
+.footer-logo {
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+.navi {}
+
+/*Slide*/
+.slide {
+    margin-bottom: 20px;
+}
+.slide > div {
+    height: 350px;
+}
+
+/*Items*/
+.items {
+    overflow: hidden;
+}
+.items > div {
+    height: 200px;
+    float: left;
+    box-sizing: border-box;
+}
+.news {
+    width: 400px;
+}
+.banner{
+    width: 200px;
+}
+.shortcut {
+    width: 200px;
+}
+/*Footer*/
+footer {
+    overflow: hidden;
+}
+
+footer > div {
+    height: 100px;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+}
+.footer-logo{
+    width:200px;    
+}
+.copyright {
+    width: 600px;
+}
+.copyright div{
+    text-align: center;
+    height: 50px;
+    line-height:50px;
+    margin-top: -10px;
+}
+
+/* Slide */
+.slide {
+    position: relative;
+}
+.slide > div {}
+.slide > div a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: slide 10s linear infinite;
+}
+.slide > div a:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide > div a:nth-child(2) {
+    animation-delay: 3.5s;
+}
+.slide > div a:nth-child(3) {
+    animation-delay: 7s;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    5% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Tab Menu */
+.tab-inner {
+    width: 95%;
+    margin: auto;
+}
+.btn {}
+.btn a {
+    border: 1px solid #000;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px 5px 0 0;
+    margin-right: -6px;
+    border-bottom: none;
+    margin-bottom: -1px;
+    background-color: #ddd;
+}
+.btn a.active{
+    background-color: #fff;
+}
+.tabs{}
+.tab1{
+    border: 1px solid #000;
+    padding: 5px 5px;
+}
+.tab1 a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+}
+.tab1 a:last-child {
+    border-bottom: none;
+}
+.tab1 a b{
+    float: right;
+    font-weight: normal;
+}
+.tab2 {
+    display: none;
+    border:  1px solid #000;
+    height : 169px
+    text-align: center;
+    padding:20px 0 20px 20px; 
+    box-sizing: border-box;
+}
+.tab2 img {
+    width: 110px;
+}
+
+/* CSS로 글자 자르기 - 공지사항 */
+.tab1 a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    overflow: hidden;
+}
+.tab1 a em,
+.tab1 a b {
+    display: block;
+    float: left;
+    font-weight: normal;
+    font-style: normal;
+}
+.tab1 a em {
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tab1 a b {
+    width: 30%;
+}
+/* CSS로 글자 자르기 - 공지사항 */
+
+.banner,
+.shortcut {
+    text-align: right;
+   
+}
+.banner a img, 
+.shortcut a img {
+    width: 90%;
+    height: 90%;
+    
+}
+
+/* Navigation */
+
+
+/* Modal-popup */
+/*.modal {
+    background-color: rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: none;
+}*/
+/*Layer-popup*/
+.modal-content {
+    width: 350px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.13);
+    display: none; /*Modal-popup시 제거*/
+}
+.close-modal {
+    float: right;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
